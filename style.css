@@ -50,31 +50,5 @@ body::before {
 .hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
-
-    /* 😢 NO button */
-.no-btn {
-    background: rgba(255, 255, 255, 0.12);
-    color: #ffdede;
-}
-
-.no-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
-}
-
-/* 😭 Sad final screen */
-.final.sad {
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.9)
-        ),
-        url('img4.jpg') center / cover no-repeat;
-}
-
-.final.sad p {
-    font-size: 1.25rem;
-    line-height: 1.9;
-    animation: floatUp 2s ease forwards;
 }
 
