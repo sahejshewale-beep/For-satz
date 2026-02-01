@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Satvika 🤍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+    <section class="hero">
+        <h1>Satvika 🤍</h1>
+        <p class="fade">
+            This isn’t a text.<br>
+            This isn’t a call.<br><br>
+            This is me choosing a moment that lasts.
+        </p>
+    </section>
+
+    <section class="story fade">
+        <p>
+            Being far from you isn’t easy.<br>
+            But loving you has never been hard.<br><br>
+            Every smile, every look,<br>
+            every second with you —<br>
+            it stays with me.
+        </p>
+    </section>
+
+    <section class="gallery">
+        <img src="img1.jpg">
+        <img src="img2.jpg">
+        <img src="img3.jpg">
+        <img src="img4.jpg">
+        <img src="img5.jpg">
+        <img src="img6.jpg">
+    </section>
+
+    <section class="line fade">
+        <p>
+            Some people feel like home.<br>
+            You’ve always felt like mine.
+        </p>
+    </section>
+
+    <section class="question">
+        <h2>So…</h2>
+        <h1>Will you be my Valentine? 🌹</h1>
+
+        <div class="buttons">
+            <button onclick="yes()">Yes, Sahej ❤️</button>
+            <button onclick="yes()">Always you 🤍</button>
+        </div>
+    </section>
+
+</div>
+
+<script>
+function yes() {
+    document.body.innerHTML = `
+    <div class="final">
+        <h1>🤍</h1>
+        <p>
+        Thank you for choosing me.<br><br>
+        No matter the distance,<br>
+        it’s you.<br>
+        It’s always been you.
+        </p>
+        <span>— Sahej</span>
+    </div>
+    `;
+}
+</script>
+
+</body>
+</html>
