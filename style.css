@@ -1,88 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: 'Georgia', serif;
-    background: #fff6f8;
-    color: #4b1e2f;
+    background: linear-gradient(180deg, #fff0f5, #fdebed);
+    font-family: 'Poppins', sans-serif;
+    color: #5a1f2b;
     text-align: center;
+    overflow-x: hidden;
+}
+
+/* ✨ Floating hearts background */
+body::before {
+    content: "❤ 🤍 ❤ 🤍 ❤";
+    position: fixed;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    font-size: 2rem;
+    opacity: 0.08;
+    animation: floatHearts 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatHearts {
+    from { transform: translateY(0); }
+    to { transform: translateY(120vh); }
 }
 
 .container {
-    padding: 40px 20px;
+    padding: 40px 20px 80px;
 }
 
+/* 🌸 HERO */
 .hero h1 {
+    font-family: 'Playfair Display', serif;
     font-size: 3rem;
+    margin-bottom: 15px;
+    animation: fadeDown 2s ease forwards;
 }
 
-.fade {
+.hero p {
+    font-size: 1.1rem;
     opacity: 0;
-    animation: fadeIn 2s forwards;
+    animation: fadeIn 2.5s ease forwards;
+    animation-delay: 0.8s;
 }
 
-.story, .line {
-    margin: 60px 0;
-    font-size: 1.2rem;
+/* 💌 STORY */
+.story {
+    margin: 70px 0;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeInUp 2s ease forwards;
+    animation-delay: 1.5s;
 }
 
+/* 📸 GALLERY */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin: 50px 0;
 }
 
 .gallery img {
     width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+    transform: scale(0.95);
+    opacity: 0;
+    animation: imagePop 1.2s ease forwards;
 }
 
+.gallery img:nth-child(1) { animation-delay: 0.2s; }
+.gallery img:nth-child(2) { animation-delay: 0.4s; }
+.gallery img:nth-child(3) { animation-delay: 0.6s; }
+.gallery img:nth-child(4) { animation-delay: 0.8s; }
+.gallery img:nth-child(5) { animation-delay: 1s; }
+.gallery img:nth-child(6) { animation-delay: 1.2s; }
+
+/* 🫶 LINE */
+.line {
+    margin: 70px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    opacity: 0;
+    animation: fadeInUp 2s ease forwards;
+    animation-delay: 2s;
+}
+
+/* 🌹 QUESTION */
 .question {
-    margin-top: 80px;
+    margin-top: 90px;
+}
+
+.question h2 {
+    font-size: 1.4rem;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
 }
 
 .question h1 {
-    font-size: 2.2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    margin-top: 10px;
+    opacity: 0;
+    animation: heartbeat 1.8s ease forwards;
+    animation-delay: 0.5s;
 }
 
+/* 💕 BUTTONS */
 .buttons {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 button {
-    padding: 15px 30px;
-    margin: 10px;
+    padding: 15px 32px;
+    margin: 12px;
     border: none;
-    border-radius: 30px;
+    border-radius: 40px;
     font-size: 1rem;
-    background: #b23a48;
+    background: linear-gradient(135deg, #c94b6a, #e86b8c);
     color: white;
     cursor: pointer;
+    box-shadow: 0 10px 20px rgba(201,75,106,0.4);
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background: #8f2d3a;
+    transform: scale(1.08);
+    box-shadow: 0 15px 30px rgba(201,75,106,0.6);
 }
 
+/* 💖 FINAL SCREEN */
 .final {
     height: 100vh;
-    background: #b23a48;
+    background: linear-gradient(180deg, #c94b6a, #8f2d3a);
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 1.5s ease forwards;
 }
 
 .final p {
     font-size: 1.3rem;
-    margin: 20px;
+    line-height: 1.8;
+    animation: fadeInUp 2s ease forwards;
 }
 
 .final span {
-    margin-top: 20px;
+    margin-top: 25px;
     font-style: italic;
+    opacity: 0.9;
 }
 
+/* ✨ ANIMATIONS */
 @keyframes fadeIn {
     to { opacity: 1; }
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(35px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes imagePop {
+    from { opacity: 0; transform: scale(0.85); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); opacity: 0; }
+    40% { transform: scale(1.08); opacity: 1; }
+    60% { transform: scale(0.95); }
+    100% { transform: scale(1); }
 }
