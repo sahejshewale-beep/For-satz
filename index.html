@@ -45,6 +45,7 @@
         <div class="buttons">
             <button onclick="yes()">Come here, it’s a YES🤍</button>
             <button onclick="yes()">How could I not? 🥰</button>
+            <button class="no-btn" onclick="nope()">No… 😢</button>
         </div>
     </section>
 
@@ -54,21 +55,33 @@
 function yes() {
     document.body.innerHTML = `
     <div class="final">
-        <h1>🤍</h1>
         <p>
+        You just made my heart so happy <br><br>
+        No matter how far we are,<br>
+        I’ll always find my way to you.<br><br>
+        It’s you.<br>
+        Always you.
+        </p>
+        <span>— Sahej</span>
+    </div>
+    `;
+}
+
+function nope() {
+    document.body.innerHTML = `
+    <div class="final sad">
         <p>
-You just made my heart so happy<br><br>
-No matter how far we are,<br>
-I’ll always find my way to you.<br><br>
-It’s you.<br>
-Always you.
-</p>
+        Oh… okay 😢<br><br>
+        My heart feels a little heavy right now,<br>
+        but I respect you — always.<br><br>
+        Wishing you warmth and gentle days ahead 🤍
         </p>
         <span>— Sahej</span>
     </div>
     `;
 }
 </script>
+
 
 </body>
 </html>
